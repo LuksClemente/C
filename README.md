@@ -1,1 +1,2 @@
-# LP1
+# Lucas Clemente
+Aluno de Ciência da Computação - UERJ
