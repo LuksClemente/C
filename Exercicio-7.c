@@ -18,7 +18,7 @@ int main (void) {
 			P = pts;
 			strcpy(nomemais,nome);
 		}
-		if(pts<p){
+		else{
 			p = pts;
 			strcpy(nomemenos,nome);
 		}
