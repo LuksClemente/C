@@ -18,11 +18,11 @@ int main (void) {
 			P = pts;
 			strcpy(nomemais,nome);
 		}
-		else{
+		if(pts<p){
 			p = pts;
 			strcpy(nomemenos,nome);
 		}
-		
+
 		i+=1;
 	}
 	printf("Time %s tem mais pontos.\n", nomemais);
