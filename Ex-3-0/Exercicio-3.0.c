@@ -6,7 +6,7 @@ int main(void){
 	char temps[50];
 	short tempr,i,soma=0,media,j,qtd;
 	for(i=0;i<=49;i++){
-		printf("Digite uma temperatuta entre -100∞C e 100∞C: \n");
+		printf("Digite uma temperatuta entre -100¬∞C e 100¬∞C: \n");
 		scanf("%hd",&tempr);
 		temps[i]=tempr;
 		if(tempr<(-100)||(tempr>100)){
@@ -24,7 +24,7 @@ int main(void){
 		}
 	}
 	printf("Media: %hd. \n",media);
-	printf("%d temperaturas est„o acima da media",qtd);
+	printf("%d temperaturas est√£o acima da media",qtd);
 	return 0;
 	
 	
