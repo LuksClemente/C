@@ -4,7 +4,7 @@
 int main (void) {
 	char nome[20], nomemais[20], nomemenos[20];
 	int i=1, vit, emp, der, pts, P=0, p=100;
-	while(i<=3){
+	while(i<=20){
 		printf("Digite o nome do time %d: \n", i);
 		scanf("%s", nome);
 		printf("Digite o numero de vitorias: \n");
