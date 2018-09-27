@@ -3,7 +3,7 @@
 
 void compra(int* conta,int valor){
 	*conta=*conta-valor;
-	printf(":::::SALDO ATUALIZADO:::::\nApós a compra: R$ %d,00\n",*conta);
+	printf(":::::SALDO ATUALIZADO:::::\nApÃ³s a compra: R$ %d,00\n",*conta);
 }
 int main(void){
 	int compras[]={100,50,80,30,20};
