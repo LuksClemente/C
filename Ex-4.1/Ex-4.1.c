@@ -4,7 +4,7 @@ int eh_primo(int n){
     int i, qtd=0;
     for (i=1;i<=n;i+=1){
          if(n%i==0){
-              qtd+=1;
+              qtd++;
               }
     }if(qtd==2){
          printf("%d numero primo \n",n);
