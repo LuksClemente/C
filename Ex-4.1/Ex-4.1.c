@@ -1,21 +1,26 @@
 #include <stdio.h>
 
 int eh_primo(int n){
-    int i, qtd=0;
-    for (i=1;i<=n;i+=1){
-         if(n%i==0){
-              qtd++;
-              }
+    int i,qtd=0;
+    for(i=1;i<=n;i++){
+        if(n%i==0){
+            qtd++;
+        }
     }if(qtd==2){
-         printf("%d numero primo \n",n);
+        return 1;
     }else{
-         printf("%d nao primo \n",n);
+        return 0;
     }
 }
-int main (void){
-    int n;
-    printf("Digite um numero: \n");
-    scanf("%d",&n);
-    int x=eh_primo(n);
-    return 0;
+int main(void){
+	int num;
+	printf("Digite um numero: ");
+	scanf("%d",&num);
+	int x=eh_primo(num);
+	if(x==1){
+        printf("Numero primo");
+	}else{
+        printf("Numero nao primo");
+	}
+	return 0;
 }
