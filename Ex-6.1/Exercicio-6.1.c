@@ -8,8 +8,8 @@ void preenche(int* vetor,int n){
 	}
 }
 void media(int* vetor,int n){
-	int soma=0, i;
-	float medium;
+	int i;
+	float soma,medium;
 	for(i=0;i<n;i++){
 		soma+=*(vetor+i);
 	}
