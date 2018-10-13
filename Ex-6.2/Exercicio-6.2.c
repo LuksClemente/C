@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 void preenche(int arr[100][100],int l,int c){
