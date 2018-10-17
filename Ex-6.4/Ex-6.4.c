@@ -18,7 +18,7 @@ int main(void){
     printf("::::::::::INSERIR DADOS:::::::::::\n");
     printf("Digite uma frase: ");
     scanf("%s",string);
-    s=strlen(string);
+    s=strlen2(string);
     printf(":::::QUANTIDADE DE CARACTERES:::::\n");
     printf("Numero de caracteres: %d\n",s);
     printf("::::::::::::::::::::::::::::::::::\n");
