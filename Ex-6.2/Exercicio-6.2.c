@@ -21,7 +21,7 @@ float media(int arr[100][100],int l,int c){
         printf("\n");
     }
     printf(":::::::SOMA::::::\n");
-    printf("Valor da soma: %f\n",soma);
+    printf("Valor da soma: %.2f\n",soma);
     float medium=(soma/(l*c));
     return medium;
 }
@@ -36,6 +36,6 @@ int main(void){
     preenche(vec,l,c);
     medium=media(vec,l,c);
     printf("::::::MEDIA::::::\n");
-    printf("Valor da media: %f\n",medium);
+    printf("Valor da media: %.2f\n",medium);
     return 0;
 }
