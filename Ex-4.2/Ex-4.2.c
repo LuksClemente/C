@@ -1,32 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int eh_primo(int n){
-    int i,qtd=0;
-    for(i=1;i<=n;i++){
-        if(n%i==0){
-            qtd++;
+    int i, qtd=0;
+    for (i=2;i<n;i++){
+        if (n%i==0){
+            qtd+=1;
         }
     }
-    if(qtd==2){
-        return 1;
-    }else{
-        return 0;
-    }
+    return qtd;
 }
 void todos_os_primos(int n){
-    printf(":::::NUMEROS:::::\n");
-    while(n>0){
-        int x=eh_primo(n);
-        if(x==1){
-            printf("%d\n",n);
-        }
-        n--;
-    }
+	while(n>1){
+		int x=eh_primo(n);
+		if(x==0){
+			printf("%d\n",n);
+		}
+		n--;
+	}
 }
 int main(void){
-    int max;
-    printf("Digite um numero: ");
-    scanf("%d",&max);
-    todos_os_primos(max);
-    return 0;
+	int max;
+	printf("Digite um numero: ");
+	scanf("%d",&max);
+	todos_os_primos(max);
+	return 0;
 }
