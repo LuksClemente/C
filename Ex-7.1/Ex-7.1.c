@@ -7,7 +7,6 @@ struct Campeao{
     int habilidade;
 };
 void preenche(struct Campeao* c){
-    int* v,m,d,h;
     printf("Digite os atributos de seu campeao: ");
     scanf("%d %d %d %d",&((*c).vida),&((*c).mana),&((*c).dano),&((*c).habilidade));
 }   
