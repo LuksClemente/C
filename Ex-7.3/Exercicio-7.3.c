@@ -43,7 +43,7 @@ void distancia(ponto vector[]){
 int main(void){
 	ponto vec[10];
 	ponto pt;
-	pt=preencher(1,1);
+	pt=preencher(0,0);
 	vetor(vec);
 	distancia(vec);
 	return 0;	
