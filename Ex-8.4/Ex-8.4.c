@@ -9,13 +9,13 @@ void preenche(FILE* f, char* s){
     	for(j=0;j<x;j++){
         	fputc(s[j],f); 
     	}
-		  fputc(' ',f);
+	fputc(' ',f);
 	}
 }
 int main(void){
-  char s[25],v[10];
+  	char s[25],v[10];
 	FILE* f=fopen("/home/ime/arq.txt","w");
 	preenche(f,s);
 	fclose(f);
-  return 0;
+  	return 0;
 }
