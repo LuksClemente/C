@@ -22,7 +22,7 @@ void preenche(struct Campeao* c1,int esc){
     		printf("DIGITE O DANO DO SEU CAMPEÃO: ");
     		scanf("%d",&((*c1).reg.dano));
 	}if(esc==2){
-		printf("DIGITE A HABILIDADE DO SEU CAPEÃO: ");
+		printf("DIGITE A HABILIDADE DO SEU CAMPEÃO: ");
 		scanf("%d",&((*c1).reg.habilidade));
 	}
 }
