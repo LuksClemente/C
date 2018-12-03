@@ -2,8 +2,8 @@
 #include <string.h>
 
 int main(void){
-    char s[25],v[10];
-    int x,i,j;
+    	char s[25],v[10];
+    	int x,i,j;
 	FILE* f=fopen("/home/ime/arq.txt","w");
 	for(i=0;i<10;i++){
     	scanf("%s",s);
@@ -14,5 +14,5 @@ int main(void){
 		fputc(' ',f);
 	}
 	fclose(f);
-    return 0;
+    	return 0;
 }
