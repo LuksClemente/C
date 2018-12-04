@@ -34,43 +34,43 @@ void preenche2(struct Campeao2* c2,int e){
 int main(void){
 	int escolha;
 	printf("ESCOLHA ENTRE DANO OU HABILIDADE[1/2]: ");
-    scanf("%d",&escolha);
-    struct Campeao2 c2;
-    preenche2(&c2,escolha);
-    FILE* f=fopen("/home/ime/campeaolol.txt","wb");
-    if (escolha==1){
-        fwrite(&c2.nome,sizeof(char),(strlen(c2.nome)+1),f);
-    	fwrite(&c2.c.vida,sizeof(int),1,f);
-    	fwrite(&c2.c.mana,sizeof(int),1,f);
-    	fwrite(&c2.c.reg.dano,sizeof(int),1,f);
-    }if(escolha==2){
-        fwrite(&c2.nome,sizeof(char),(strlen(c2.nome)+1),f);
-    	fwrite(&c2.c.vida,sizeof(int),1,f);
-    	fwrite(&c2.c.mana,sizeof(int),1,f);
-    	fwrite(&c2.c.reg.habilidade,sizeof(int),1,f);
+    	scanf("%d",&escolha);
+    	struct Campeao2 c2;
+    	preenche2(&c2,escolha);
+    	FILE* f=fopen("/home/ime/campeaolol.txt","wb");
+    	if (escolha==1){
+        	fwrite(&c2.nome,sizeof(char),(strlen(c2.nome)+1),f);
+    		fwrite(&c2.c.vida,sizeof(int),1,f);
+    		fwrite(&c2.c.mana,sizeof(int),1,f);
+    		fwrite(&c2.c.reg.dano,sizeof(int),1,f);
+    	}if(escolha==2){
+        	fwrite(&c2.nome,sizeof(char),(strlen(c2.nome)+1),f);
+    		fwrite(&c2.c.vida,sizeof(int),1,f);
+    		fwrite(&c2.c.mana,sizeof(int),1,f);
+    		fwrite(&c2.c.reg.habilidade,sizeof(int),1,f);
 	}
-    fclose(f);
-    FILE* g=fopen("/home/ime/campeaolol.txt","rb");
-    struct Campeao2 c3;
-    if(escolha==1){
-        fread(&c3.nome,sizeof(char),(strlen(c2.nome)+1),g);
-        fread(&c3.c.vida,sizeof(int),1,g);
-        fread(&c3.c.mana,sizeof(int),1,g);
-        fread(&c3.c.reg.dano,sizeof(int),1,g);
-        printf("NOME: %s\n",c3.nome);
-    	printf("VIDA: %d\n",c3.c.vida);
-    	printf("MANA: %d\n",c3.c.mana);
-        printf("DANO: %d\n",c3.c.reg.dano);
+    	fclose(f);
+    	FILE* g=fopen("/home/ime/campeaolol.txt","rb");
+    	struct Campeao2 c3;
+    	if(escolha==1){
+        	fread(&c3.nome,sizeof(char),(strlen(c2.nome)+1),g);
+        	fread(&c3.c.vida,sizeof(int),1,g);
+        	fread(&c3.c.mana,sizeof(int),1,g);
+        	fread(&c3.c.reg.dano,sizeof(int),1,g);
+        	printf("NOME: %s\n",c3.nome);
+    		printf("VIDA: %d\n",c3.c.vida);
+    		printf("MANA: %d\n",c3.c.mana);
+        	printf("DANO: %d\n",c3.c.reg.dano);
     }
     if(escolha==2){
-        fread(&c3.nome,sizeof(char),(strlen(c2.nome)+1),g);
-        fread(&c3.c.vida,sizeof(int),1,g);
-        fread(&c3.c.mana,sizeof(int),1,g);
-        fread(&c3.c.reg.habilidade,sizeof(int),1,g);
-        printf("NOME: %s\n",c3.nome);
-    	printf("VIDA: %d\n",c3.c.vida);
-    	printf("MANA: %d\n",c3.c.mana);
-        printf("HABILIDADE: %d\n",c3.c.reg.habilidade);
+        	fread(&c3.nome,sizeof(char),(strlen(c2.nome)+1),g);
+        	fread(&c3.c.vida,sizeof(int),1,g);
+        	fread(&c3.c.mana,sizeof(int),1,g);
+        	fread(&c3.c.reg.habilidade,sizeof(int),1,g);
+        	printf("NOME: %s\n",c3.nome);
+    		printf("VIDA: %d\n",c3.c.vida);
+    		printf("MANA: %d\n",c3.c.mana);
+        	printf("HABILIDADE: %d\n",c3.c.reg.habilidade);
     }
     return 0;
 }
