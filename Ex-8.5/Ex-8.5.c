@@ -61,8 +61,8 @@ int main(void){
     		printf("VIDA: %d\n",c3.c.vida);
     		printf("MANA: %d\n",c3.c.mana);
         	printf("DANO: %d\n",c3.c.reg.dano);
-    }
-    if(escolha==2){
+    	}
+    	if(escolha==2){
         	fread(&c3.nome,sizeof(char),(strlen(c2.nome)+1),g);
         	fread(&c3.c.vida,sizeof(int),1,g);
         	fread(&c3.c.mana,sizeof(int),1,g);
@@ -71,6 +71,6 @@ int main(void){
     		printf("VIDA: %d\n",c3.c.vida);
     		printf("MANA: %d\n",c3.c.mana);
         	printf("HABILIDADE: %d\n",c3.c.reg.habilidade);
-    }
-    return 0;
+    	}
+    	return 0;
 }
