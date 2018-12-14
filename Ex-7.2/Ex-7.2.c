@@ -1,32 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Campeao{
-    int vida;
-    int mana;
-    int dano;
-    int habilidade;
+struct Cinema{
+	int sala;
+	int ingressos;
 };
-struct Campeao2{
-    char nome[50];
-    struct Campeao c;
+struct Filme{
+	char nome[50];
+	struct Cinema c;
 };
-void preenche(struct Campeao* c1){
-    printf("DIGITE OS ATRIBUTOS DO SEU CAMPEÃO[VIDA/MANA/DANO/HABILIDADE]: ");
-    scanf("%d %d %d %d",&((*c1).vida),&((*c1).mana),&((*c1).dano),&((*c1).habilidade));
+void preenche(struct Cinema* cine){
+	printf("Qual a sala do filme?: ");
+	scanf("%d",&(*cine).sala);
+	printf("Quantos ingressos?: ");
+	scanf("%d",&(*cine).ingressos);
 }
-void preenche2(struct Campeao2* c2){
-    printf("DIGITE O NOME DO SEU CAMPEAO: ");
-    scanf("%s",((*c2).nome));
-    preenche((&(*c2).c));
-} 
+void preenche2(struct Filme* filme){
+	printf("Digite o nome do filme: ");
+	scanf("%s",(*filme).nome);
+	preenche(&(*filme).c);
+}
 int main(void){
-    struct Campeao2 c2;
-    preenche2(&c2);
-    printf("NOME: %s\n",c2.nome);
-    printf("VIDA: %d\n",c2.c.vida);
-    printf("MANA: %d\n",c2.c.mana);
-    printf("DANO: %d\n",c2.c.dano);
-    printf("HABILIDADE: %d\n",c2.c.habilidade);
-    return 0;
+	struct Filme filme;
+	preenche2(&filme);
+	printf("NOME DO FILME: %s\n",filme.nome);
+	printf("SALA: %d\n",filme.c.sala);
+	printf("QTD INGRESSOS: %d\n",filme.c.ingressos);
+	return 0;
 }
+
