@@ -1,21 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-struct Campeao{
-    int vida;
-    int mana;
-    int dano;
-    int habilidade;
+struct Cinema{
+	int sala;
+	int ingressos;
 };
-void preenche(struct Campeao* c){
-    printf("Digite os atributos de seu campeao: ");
-    scanf("%d %d %d %d",&((*c).vida),&((*c).mana),&((*c).dano),&((*c).habilidade));
-}   
+void preenche(struct Cinema* cine){
+	printf("Qual a sala do filme?: ");
+	scanf("%d",&(*cine).sala);
+	printf("Quantos ingressos?: ");
+	scanf("%d",&(*cine).ingressos);
+}
 int main(void){
-    struct Campeao champ;
-    preenche(&champ);
-    printf("VIDA: %d\n",champ.vida);
-    printf("MANA: %d\n",champ.mana);
-    printf("DANO: %d\n",champ.dano);
-    printf("HABILIDADE: %d\n",champ.habilidade);
-    return 0;
+	struct Cinema cinema;
+	preenche(&cinema);
+	printf("SALA: %d\n",cinema.sala);
+	printf("QTD INGRESSOS: %d\n",cinema.ingressos);
+	return 0;
 }
