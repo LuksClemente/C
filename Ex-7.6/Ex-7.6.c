@@ -1,49 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Campeao{
-	int vida;
-	int mana;	
+struct Jogador{
+	int passe;
+	int drible;
 	union{
-		int dano;
-    		int habilidade;
-	}reg;
+		int finalizacao;
+		int defesa;
+	}posicao;
 };
-struct Campeao2{
-    	char nome[50];
-    	struct Campeao c;
+struct Player{
+	char nome[20];
+	struct Jogador p;
 };
-void preenche(struct Campeao* c1,int esc){	
-    	printf("DIGITE A VIDA DE SEU CAMPEÃO: ");
-    	scanf("%d",&((*c1).vida));
-    	printf("DIGITE A MANA DE SEU CAMPEÃO: ");
-    	scanf("%d",&((*c1).mana));
-    	if(esc==1){
-    		printf("DIGITE O DANO DO SEU CAMPEÃO: ");
-    		scanf("%d",&((*c1).reg.dano));
-	}if(esc==2){
-		printf("DIGITE A HABILIDADE DO SEU CAMPEÃO: ");
-		scanf("%d",&((*c1).reg.habilidade));
+void preenche(struct Jogador* p1,int esc){
+	printf("Quantos de passe[0-100]?: ");
+	scanf("%d",&(*p1).passe);
+	printf("Quanto de drible[0-100]?: ");
+	scanf("%d",&(*p1).drible);
+	if(esc==1){
+		printf("Quanto de finalizacao[0-100]: ");
+		scanf("%d",&(*p1).posicao.finalizacao);
+	}else{
+		printf("Quanto de defesa[0-100]: ");
+		scanf("%d",&(*p1).posicao.defesa);
 	}
 }
-void preenche2(struct Campeao2* c2,int e){
-    	printf("DIGITE O NOME DO SEU CAMPEAO: ");
-    	scanf("%s",((*c2).nome));
-    	preenche((&(*c2).c),e);
-} 
+void preenche2(struct Player* p1,int e){
+	printf("Nome do jogador: ");
+	scanf("%s",(*p1).nome);
+	preenche(&(*p1).p,e);
+}
 int main(void){
 	int escolha;
-	printf("ESCOLHA ENTRE DANO OU HABILIDADE[1/2]: ");
-    	scanf("%d",&escolha);
-    	struct Campeao2 c2;
-    	preenche2(&c2,escolha);
-    	printf("NOME: %s\n",c2.nome);
-    	printf("VIDA: %d\n",c2.c.vida);
-    	printf("MANA: %d\n",c2.c.mana);
-    	if (escolha==1){
-    		printf("DANO: %d\n",c2.c.reg.dano);
-    	}if(escolha==2){
-    		printf("HABILIDADE: %d\n",c2.c.reg.habilidade);
+	printf("Jogador de linha ou goleiro?[1/2]: ");
+	scanf("%d",&escolha);
+	struct Player player;
+	preenche2(&player,escolha);
+	printf("NOME: %s\n",player.nome);
+	printf("PASSE: %d\n",player.p.passe);
+	printf("DRIBLE: %d\n",player.p.drible);
+	if(escolha==1){
+		printf("FINALIZACAO: %d\n",player.p.posicao.finalizacao);
+	}else{
+		printf("DEFESA: %d\n",player.p.posicao.defesa);
 	}
-    	return 0;
+	return 0;
 }
