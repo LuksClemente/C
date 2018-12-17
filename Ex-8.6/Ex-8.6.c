@@ -11,15 +11,14 @@ int main(void){
     Pessoa vec[100];
     printf("Quantas pessoas?: ");
     scanf("%d",&n);
-    FILE* f=fopen("/home/ime/arq1.bin","wb");
+    FILE* f=fopen("/home/ime/arq.bin","wb");
     fwrite(&n,sizeof(int),1,f);
     for(int i=0;i<n;i++){
         printf("Insira o nome: ");
         scanf("%s",vec[i].nome);
         printf("Insira a idade: ");
         scanf("%d",&vec[i].idade);
-        fwrite(vec[i].nome,sizeof(char),(strlen(vec[i].nome))+1,f);
-        fwrite(vec[i].nome,sizeof(int),1,f);
+        fwrite(&vec[i],sizeof(struct Pessoa),1,f);
     }
     fclose(f);
     return 0;
