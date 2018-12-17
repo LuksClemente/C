@@ -77,10 +77,10 @@ int main(void){
         t3=cabeca;
         cabeca=cabeca->proximo;
         free(t3);
-        printf("Valor ecnontrado e removido\n");
+        printf("Valor encontrado!\n");
         exibe(cabeca);
     }else if (x==1){
-        printf("Valor encontrado e removido\n");
+        printf("Valor encontrado!\n");
         exibe(cabeca);
     }else{
         printf("Nenhum valor removido\n");
