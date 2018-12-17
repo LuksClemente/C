@@ -83,7 +83,7 @@ int main(void){
         printf("Valor encontrado!\n");
         exibe(cabeca);
     }else{
-        printf("Nenhum valor removido\n");
+        printf("Valor nao encontrado\n");
     }
     return 0;
 }
