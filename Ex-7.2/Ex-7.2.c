@@ -1,31 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Cinema{
-	int sala;
-	int ingressos;
+struct Jogador{
+	int passe;
+	int drible;
 };
-struct Filme{
-	char nome[50];
-	struct Cinema c;
+struct Player{
+	char nome[20];
+	struct Jogador p;
 };
-void preenche(struct Cinema* cine){
-	printf("Qual a sala do filme?: ");
-	scanf("%d",&(*cine).sala);
-	printf("Quantos ingressos?: ");
-	scanf("%d",&(*cine).ingressos);
+void preenche(struct Jogador* p1){
+	printf("Quantos de passe[0-100]?: ");
+	scanf("%d",&(*p1).passe);
+	printf("Quanto de drible[0-100]?: ");
+	scanf("%d",&(*p1).drible);
 }
-void preenche2(struct Filme* filme){
-	printf("Digite o nome do filme: ");
-	scanf("%s",(*filme).nome);
-	preenche(&(*filme).c);
+void preenche2(struct Player* p1){
+	printf("Nome do jogador: ");
+	scanf("%s",(*p1).nome);
+	preenche(&(*p1).p);
 }
 int main(void){
-	struct Filme filme;
-	preenche2(&filme);
-	printf("NOME DO FILME: %s\n",filme.nome);
-	printf("SALA: %d\n",filme.c.sala);
-	printf("QTD INGRESSOS: %d\n",filme.c.ingressos);
+	struct Player player;
+	preenche2(&player);
+	printf("NOME: %s\n",player.nome);
+	printf("PASSE: %d\n",player.p.passe);
+	printf("DRIBLE: %d\n",player.p.drible);
 	return 0;
 }
-
