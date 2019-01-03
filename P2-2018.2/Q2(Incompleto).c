@@ -1,14 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct Linha{
+typedef struct Linha{
 	char disciplina[25];
 	char dias[7][25];
-};
+}Linha;
 int main(void){
-	int n1,n2,i,j;
-	struct Linha v[100];
+	int n1,n2,n,i,j;
+	Linha v[100];
 	FILE* f=fopen("E:/Documentos/LucasClemente/Listas-CC-UERJ/Linguagem-de-Programação-I/arq.txt","w");
+	fflush(f);
 	printf("Quantas disciplinas?: ");
 	scanf("%d",&n1);
 	fwrite(&n1,sizeof(int),1,f);
@@ -25,5 +26,17 @@ int main(void){
 		fwrite(&v[i],sizeof(struct Linha),1,f);
 	}
 	fclose(f);
+	return 0;
+	FILE* g=fopen("E:/Documentos/LucasClemente/Listas-CC-UERJ/Linguagem-de-Programação-I/arq.txt","r");
+	fread(&n,sizeof(int),1,g);
+	for(i=0;i<n;i++){
+		fread(&v[i],sizeof(struct Linha),1,g);
+		v[i].disciplina[25]='\0';
+		v[i].dias[7][25]='\0';
+	}
+	for(j=0;j<n;j++){
+		printf("%s, %s",v[i].disciplina,v[i].dias);
+	}
+	fclose(g);
 	return 0;
 }
