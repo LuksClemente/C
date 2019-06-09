@@ -48,7 +48,7 @@ void Desempilha(struct Pilha* p){
 void Exibe(struct Pilha* p){
 	No* pt;
 	pt = p->inicio;
-	while(p != NULL){
+	while(pt != NULL){
 		printf("%d ->", pt->elem);
 		pt = pt->prox;
 	}
