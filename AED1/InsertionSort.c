@@ -25,6 +25,6 @@ void Exibe(int b[], int n){
 int main(void){
 	int b[] = {1, 9, 5, 4, 7, 6, 8, 2, 3, 0};
 	Exibe(b, 10);
-	InsertionSort(b, 9);
+	InsertionSort(b, 10);
 	Exibe(b, 10);
 }
